@@ -131,7 +131,7 @@ button {
   color: red;
   background-color: var(--main-bg-color);
   border-style: hidden;
-  margin: 30px;
+  margin: 20px;
   align-items: center;
   font-family: "Cal Sans", sans-serif;
 }

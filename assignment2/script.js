@@ -41,6 +41,7 @@ function playSong(no) {
   artist.textContent = playlist[no].artist;
 }
 
+//buttons for changing song ussing playlist array and function
 const songOneButton = document.querySelector("#song-one-btn");
 songOneButton.addEventListener("click", function playIt() {
   audio.pause();
@@ -71,6 +72,8 @@ songFourButton.addEventListener("click", function playIt() {
 
 const volumeSliders = document.querySelectorAll(".volume__slider");
 
+// scrub bar for moving around progress bar/ timeline
+//cant get to work properly/ only will let u drag innacurately
 function scrub(e) {
   const scrubTime = (e.offsetX / progressBar.offsetWidth) * audio.duration;
   audio.currentTime = scrubTime;
@@ -82,6 +85,7 @@ progressBar.addEventListener("mousedown", () => (mousedown = true));
 progressBar.addEventListener("mousemove", (e) => mousedown && scrub(e));
 progressBar.addEventListener("mouseup", () => (mousedown = false));
 
+// changes volume according to slider
 function updateVolume() {
   audio[this.name] = this.value;
 }

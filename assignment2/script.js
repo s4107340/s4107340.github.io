@@ -22,10 +22,10 @@ function updateProgressBar() {
 // Add other functionalities here
 // setting a playlist of 4 designated songs and giving them names that can be reffered to by now playing function
 const playlist = [
-  { name: "One", link: "media/song1.mp3" },
-  { name: "Two", link: "media/song2.mp3" },
-  { name: "Three", link: "media/song3.mp3" },
-  { name: "Four", link: "media/song4.mp3" },
+  { name: "One", link: "media/song1.mp3", artist: "Artist 1" },
+  { name: "Two", link: "media/song2.mp3", artist: "Artist 2" },
+  { name: "Three", link: "media/song3.mp3", artist: "Artist 3" },
+  { name: "Four", link: "media/song4.mp3", artist: "Artist 4" },
 ];
 
 // function to give each song an index in array and play when called upon
@@ -37,6 +37,8 @@ function playSong(no) {
   audio.play();
   //sets playback button to pause icon to fix issue of icon being wrong when changing song
   playPauseImg.src = "https://img.icons8.com/ios-glyphs/30/pause--v1.png";
+  //grabs artists name from playlist data to displaying in  now playing
+  artist.textContent = playlist[no].artist;
 }
 
 const songOneButton = document.querySelector("#song-one-btn");
@@ -90,3 +92,4 @@ volumeSliders.forEach((volume) => {
 
 const songName = document.querySelector("#song-name");
 const songPhoto = document.querySelector("#song-photo");
+const artist = document.querySelector("#artist");

@@ -27,8 +27,7 @@ body {
 
 /* Add additional styles as needed */
 .song-image {
-  max-width: 50%;
-  max-height: 50%;
+  max-width: 40%;
   margin: auto;
 }
 

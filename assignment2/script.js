@@ -97,3 +97,8 @@ volumeSliders.forEach((volume) => {
 const songName = document.querySelector("#song-name");
 const songPhoto = document.querySelector("#song-photo");
 const artist = document.querySelector("#artist");
+
+// keyboard shortcut press space to pause or play from progress
+document.addEventListener("keydown", (e) => {
+  if (e.code === "Space") togglePlayPause();
+});

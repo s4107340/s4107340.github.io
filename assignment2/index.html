@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Music Album</title>
+    <!-- add the font family of your choice -->
+    <link rel="stylesheet" href="reset.css" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cal+Sans&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <!-- Header Section -->
+    <header>
+      <h1>Media Player Website</h1>
+    </header>
+
+    <!-- Navigation Section 
+    <nav>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Videos</a></li>
+        <li><a href="#">Music</a></li>
+        <li><a href="#">Playlists</a></li> 
+        -->
+        <!-- Add or remove navigation items as needed -->
+      </ul>
+    </nav>
+
+    <!-- Main Content Section -->
+    <main class="container">
+        <div class="meta-data">
+        <section class="song-title">
+            <h1>Now Playing: <span id="song-name">One</span></h1>
+          </section>
+          <section class="song-image">
+            <img src="media/song1.webp" alt="" id="song-photo">
+          </section>
+        </div>
+      <!-- Media Player Section -->
+      <div class="media-player">
+        <audio id="custom-media-player">
+          <source src="media/song1.mp3" type="audio/mpeg" />
+          <source src="media/song2.mp3" type="audio/mpeg" />
+          <source src="media/song3.mp3" type="audio/mpeg" />
+          <source src="media/song4.mp3" type="audio/mpeg" />
+          Your browser does not support the audio element.
+        </audio>
+        <div class="custom-controls">
+          <button id="play-pause-btn" onclick="togglePlayPause()">
+            <img
+              id="play-pause-img"
+              src="https://img.icons8.com/ios-glyphs/30/play--v1.png"
+              alt="Play Button"
+              width="24"
+              height="24"
+            />
+          </button>
+          <!-- add the missing buttons or functionality here -->
+          <div class="volume-bar">
+            <img
+              src="https://img.icons8.com/?size=100&id=reqgj3e1uKBy&format=png&color=000000"
+              alt="Play Button"
+              width="24"
+              height="24"
+              class="volume-icon"
+            />
+            <input
+              type="range"
+              name="volume"
+              class="controls__slider"
+              min="0"
+              max="1"
+              step="0.05"
+              value="1"
+            />
+          </div>
+
+          <div class="progress-bar">
+            <span id="progress-bar-fill"></span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Additional Content Section -->
+      <section>
+        <!-- <h2>Additional Content</h2>
+        <p>This is where you can showcase any other relevant content.</p> 
+        Add more content as needed -->
+        <div class="name-button">
+        <section class="play-list">
+          <button id="song-one-btn">
+            <span>Song 1</span>
+          </button>
+          <button id="song-two-btn">
+            <span>Song 2</span>
+            <button id="song-three-btn">
+                <span>Song 3</span>
+                <button id="song-four-btn">
+                    <span>Song 4</span>
+          </button>
+        </section>
+    </div>
+      </section>
+    </main>
+
+    <!-- Footer Section -->
+    <footer>
+      <p>&copy; 2025 Media Player Website. All rights reserved.</p><br>
+      <span>icons by <a href="https://icons8.com">Icons8</a></span>
+    </footer>
+  </body>
+</html>

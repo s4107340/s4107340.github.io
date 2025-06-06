@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Artwork viewer</title>
+    <link rel="stylesheet" href="reset.css" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <!-- Artwork/gallery viewer based on artworks located at the NGV with description cards
+   Using hover and click functions -->
+  <body>
+    <!-- Gallery container -->
+    <div class="gallery">
+      <!-- Art 1 -->
+      <div
+        class="artwork"
+        id="art1"
+        style="background-image: url(img/art1.jpg)"
+      ></div>
+      <!-- https://www.ngv.vic.gov.au/explore/collection/work/126254/ -->
+
+      <!-- Art 2 -->
+      <div
+        class="artwork"
+        id="art2"
+        style="background-image: url(img/art2.jpg)"
+      ></div>
+      <!-- https://www.ngv.vic.gov.au/explore/collection/work/4259/ -->
+
+      <!-- Art 3 -->
+      <div
+        class="artwork"
+        id="art3"
+        style="background-image: url(img/art3.jpg)"
+      ></div>
+      <!-- https://www.ngv.vic.gov.au/explore/collection/work/4409/ -->
+    </div>
+
+    <!-- Information card for more info including title, year and artist based on the info cards in NGV -->
+    <div class="info" id="info">
+      <div class="info-text">
+        <!-- javascript will replace placeholder text with info specific to each artwork -->
+        <h1 id="artName">Title</h1>
+        <p id="artYear">Year</p>
+        <p id="artDesc">Artist</p>
+        <button class="close-btn" id="closeBtn">CLOSE</button>
+      </div>
+    </div>
+  </body>
+</html>

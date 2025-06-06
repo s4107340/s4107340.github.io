@@ -1,0 +1,89 @@
+/* light off white coloured background intended to replciate the look of a real gallery */
+body {
+  background-color: #eef2f3;
+  display: flex;
+  text-align: center;
+  margin: auto;
+  width: 100%;
+  height: 100%;
+  justify-content: space-around;
+  align-items: center;
+  font-family: sans-serif;
+  font-optical-sizing: auto;
+  color: black;
+  overflow-x: scroll;
+  scroll-behavior: smooth;
+}
+
+/* text for artwork name */
+h1 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+/* text for description */
+p {
+  font-size: 1.7rem;
+}
+
+.gallery {
+  display: flex; /* arranges artworks in a row */
+  justify-content: center;
+  gap: 8vw; /* creating space between artworks */
+  padding: 10px;
+}
+
+.artwork {
+  position: relative;
+  width: 200px;
+  height: 300px;
+  background-size: cover; /* Used cover to make artwork fill entire space */
+  background-position: center;
+  border: 10px solid #966f33; /* brown wood coloured border emulating picture frames in a gallery */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  cursor: pointer; /* Shows hand cursor when hovering */
+  transition: transform 0.3s ease;
+}
+
+/* Artwork expands when hovered over to show it is selected */
+.artwork:hover {
+  transform: scale(1.1);
+}
+
+/* Information card to appear on click */
+.info {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  /* to appear in centre */
+  background: rgba(
+    0,
+    0,
+    0,
+    0.8
+  ); /* Greys out main screen for focus on the info card */
+  display: none; /* Invisible until js function click */
+  justify-content: center;
+  align-items: center;
+}
+
+/* Information card styled like gallery */
+.info-text {
+  background: white;
+  padding: 20px;
+  max-width: 500px;
+  text-align: center;
+}
+
+/* button styled like ngv website black background and white text */
+.close-btn {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background: black;
+  color: white;
+  border: none;
+  cursor: pointer; /* Shows hand cursor when hovering */
+}
